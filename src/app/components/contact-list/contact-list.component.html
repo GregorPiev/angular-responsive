@@ -1,0 +1,20 @@
+<div id="contact-list">
+  <mat-card class="inner-item" *ngFor="let item of contacts">
+    <mat-card-header class="inner-item-header">
+      <img [src]="item.avatarUrl" />
+      <div>
+        <mat-card-title class="item-title-name">{{ item.name }}</mat-card-title>
+        <mat-card-subtitle class="item-subtitle">{{
+          item.jobTitle
+        }}</mat-card-subtitle>
+      </div>
+    </mat-card-header>
+    <mat-card-content class="inner-item-body">
+      <ul class="inner-info">
+        <li><i class="material-icons">phone</i>&nbsp;{{ item.telephone }}</li>
+        <li><i class="material-icons">email</i>&nbsp;{{ item.email }}</li>
+        <li><i class="fas fa-location-arrow"></i>&nbsp;{{ item.address }}</li>
+      </ul>
+    </mat-card-content>
+  </mat-card>
+</div>

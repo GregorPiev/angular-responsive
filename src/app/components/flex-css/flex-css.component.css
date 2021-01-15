@@ -1,0 +1,49 @@
+body {
+  padding: 5px;
+  margin: 5px;
+}
+.container_1,
+.container_2 {
+  display: flex;
+}
+
+@media screen and (min-width: 599px) {
+  .container_1 {
+    min-width: 599px;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 95vw;
+  }
+  .container_2 {
+    min-width: 599px;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container_1 {
+    width: 95vw;
+    max-width: 600px;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .container_2 {
+    width: 95vw;
+    max-width: 600px;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  button {
+    width: 100px;
+  }
+
+  button.even {
+    align-self: flex-end;
+  }
+  button.odd {
+    align-self: flex-start;
+  }
+}
